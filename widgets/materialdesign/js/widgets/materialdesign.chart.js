@@ -96,7 +96,6 @@ vis.binds.materialdesign.chart = {
                     }
 
 
-
                     // Data with datasets options
                     var chartData = {
                         labels: labelArray,
@@ -331,6 +330,7 @@ vis.binds.materialdesign.chart = {
             console.error(`[Bar Chart - ${data.wid}] error: ${ex.message}, stack: ${ex.stack}`);
         }
     },
+    //// Changes by besterquester
     lineHistory: function (el, data) {
         try {
             let debug = myMdwHelper.getBooleanFromData(data.mdwDebug, false);
@@ -1298,6 +1298,7 @@ vis.binds.materialdesign.chart = {
 
                                             if (graph.type && graph.type === 'line') {
                                                 // line graph
+                                               
                                                 let fillBetweenLines = myMdwHelper.getValueFromData(graph.line_FillBetweenLines, undefined);
 
                                                 Object.assign(graphObj,
