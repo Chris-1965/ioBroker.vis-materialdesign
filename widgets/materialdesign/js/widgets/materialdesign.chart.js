@@ -699,10 +699,16 @@ vis.binds.materialdesign.chart = {
                                     fontColor: 'red'
                                 };
                             }
-
+                            /*****
+                            var myChart = new Chart(ctx, {
+                                type: 'line',
+                                plugins: [ChartDataLabels, myChartHelper.getMyGradientPlugin(data)]     // show value labels
+                            });
+                            *****/
                             // Chart declaration:
                             myChart = new Chart(ctx, {
-                                type: 'line',
+                                //type: 'line',
+                                type: myMdwHelper.getValueFromData(data.chartType, 'bar'),              //changed by BQ
                                 data: chartData,
                                 options: options,
                                 plugins: [ChartDataLabels]     // show value labels
@@ -1148,7 +1154,7 @@ vis.binds.materialdesign.chart = {
 
                     // intialize chart -> some parameters needed
                     var myChart = new Chart(ctx, {
-                        type: myMdwHelper.getValueFromData(data.chartType, 'bar'),
+                        type: myMdwHelper.getValueFromData(data.chartType, 'bar'),             
                         plugins: [ChartDataLabels, myChartHelper.getMyGradientPlugin(data)]     // show value labels
                     });
 
