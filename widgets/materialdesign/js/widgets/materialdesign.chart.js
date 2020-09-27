@@ -433,7 +433,7 @@ vis.binds.materialdesign.chart = {
                                 myDatasets.push(
                                     {
                                         data: dataArray,   
-                                        type: myMdwHelper.getNumberFromData(data.attr('chartType'),'line'),                               
+                                        type: myMdwHelper.getNumberFromData(data.attr('chartType'),'bar'),                 // added by BQ                         
                                         lineTension: myMdwHelper.getNumberFromData(data.attr('lineTension' + i), 0.4),
                                         borderWidth: myMdwHelper.getNumberFromData(data.attr('lineThikness' + i), 2),
                                         steppedLine: myMdwHelper.getBooleanFromData(data.attr('steppedLine' + i), false),
@@ -549,6 +549,8 @@ vis.binds.materialdesign.chart = {
                             var options = {
                                 responsive: true,
                                 maintainAspectRatio: false,
+                                type: myMdwHelper.getNumberFromData(data.attr('chartType'),'bar'),                 // added by BQ                         
+                                 
                                 layout: myChartHelper.getLayout(data),
                                 chartArea: {
                                     backgroundColor: myMdwHelper.getValueFromData(data.chartAreaBackgroundColor, ''),
