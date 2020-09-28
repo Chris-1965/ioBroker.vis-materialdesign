@@ -710,8 +710,8 @@ vis.binds.materialdesign.chart = {
                             *****/
                             // Chart declaration:
                             myChart = new Chart(ctx, {
-                                type: 'bar',
-                                //type: myMdwHelper.getValueFromData(data.chartType, 'bar'),              //changed by BQ
+                                //type: 'line',
+                                type: myMdwHelper.getValueFromData(data.chartType, 'bar'),              //changed by BQ
                                 data: chartData,
                                 options: options,
                                 plugins: [ChartDataLabels]     // show value labels
