@@ -714,8 +714,8 @@ vis.binds.materialdesign.chart = {
                             var myChart = new Chart(ctx, {
                                 //type: 'line',
                                 type: myMdwHelper.getValueFromData(data.chartType, 'bar'),              //changed by BQ
-                                //data: chartData,
-                               // options: options,
+                                data: chartData,
+                                options: options,
                                 plugins: [ChartDataLabels]     // show value labels
                                 //plugins: [ChartDataLabels, myChartHelper.getMyGradientPlugin(data)]     // show value labels
                             });
