@@ -433,8 +433,9 @@ vis.binds.materialdesign.chart = {
                                 myDatasets.push(
                                     {
                                         data: dataArray,   
-                                        type: 'bar',                 // added by BQ                         
-                                        lineTension: myMdwHelper.getNumberFromData(data.attr('lineTension' + i), 0.4),
+                                        //type: 'bar',                 // added by BQ                         
+                                        //lineTension: myMdwHelper.getNumberFromData(data.attr('lineTension' + i), 0.4),
+                                        lineTension: 0.8,
                                         borderWidth: myMdwHelper.getNumberFromData(data.attr('lineThikness' + i), 2),
                                         steppedLine: myMdwHelper.getBooleanFromData(data.attr('steppedLine' + i), false),
                                         label: myMdwHelper.getValueFromData(data.attr('legendText' + i), ''),
