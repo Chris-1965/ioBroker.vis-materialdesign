@@ -433,7 +433,7 @@ vis.binds.materialdesign.chart = {
                                 myDatasets.push(
                                     {
                                         data: dataArray,   
-                                        //type: myMdwHelper.getNumberFromData(data.attr('chartType'),'bar'),                 // added by BQ                         
+                                        type: 'bar',                 // added by BQ                         
                                         lineTension: myMdwHelper.getNumberFromData(data.attr('lineTension' + i), 0.4),
                                         borderWidth: myMdwHelper.getNumberFromData(data.attr('lineThikness' + i), 2),
                                         steppedLine: myMdwHelper.getBooleanFromData(data.attr('steppedLine' + i), false),
@@ -715,8 +715,8 @@ vis.binds.materialdesign.chart = {
                                 //type: 'line',
                                 type: myMdwHelper.getValueFromData(data.chartType, 'bar'),              //changed by BQ
                                 data: chartData,
-                                options: options,
-                                plugins: [ChartDataLabels]     // show value labels
+                                //options: options,
+                                //plugins: [ChartDataLabels]     // show value labels
                                 //plugins: [ChartDataLabels, myChartHelper.getMyGradientPlugin(data)]     // show value labels
                             });
 
