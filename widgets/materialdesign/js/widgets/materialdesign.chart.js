@@ -523,9 +523,11 @@ vis.binds.materialdesign.chart = {
                             }
 
                             // Data with datasets options
+                            
                             var chartData = {
                                 datasets: myDatasets,
                             };
+                            
 
                             let xAxisTimeFormats = myChartHelper.defaultTimeFormats();
                             try {
@@ -703,12 +705,7 @@ vis.binds.materialdesign.chart = {
                                     fontColor: 'red'
                                 };
                             }
-                            /*****
-                            var myChart = new Chart(ctx, {
-                                type: 'line',
-                                plugins: [ChartDataLabels, myChartHelper.getMyGradientPlugin(data)]     // show value labels
-                            });
-                            *****/
+                           
                             // Chart declaration:
                             console.log(`BQ [Line History Chart ${myMdwHelper.getValueFromData(data.chartType, 'bar')}] `);
 
@@ -716,8 +713,8 @@ vis.binds.materialdesign.chart = {
                                 //type: 'line',
                                 type: myMdwHelper.getValueFromData(data.chartType, 'bar'),              //changed by BQ
                                 data: chartData,
-                                //options: options,
-                                //plugins: [ChartDataLabels]     // show value labels
+                                options: options,
+                                plugins: [ChartDataLabels]     // show value labels
                                 //plugins: [ChartDataLabels, myChartHelper.getMyGradientPlugin(data)]     // show value labels
                             });
 
